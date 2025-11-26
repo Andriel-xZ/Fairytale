@@ -1,0 +1,43 @@
+{
+    "format_version": 2,
+    "metadata": {
+		"authors": [ "Norvale" ],
+		"product_type": "addon"
+	},
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "d242a9f9-724e-4e68-a48f-fb4a57fb9942",
+        "pack_scope": "world",
+        "version": [1, 0, 0],
+        "min_engine_version": [1 , 21 , 120]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "3fcec7b2-29e6-48c0-a0d7-451ad9d0e766",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "41cc2ff8-1777-4523-87c3-b9f6c6ab96c2",
+            "entry": "scripts/nv_ft/main.js",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.3.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "70b6ccb8-85ff-4d8d-b8b2-b356d2bbebdc",
+            "version": [ 1, 0, 0 ]
+        }
+    ]
+}

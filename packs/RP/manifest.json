@@ -1,0 +1,28 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": [ "Norvale" ],
+        "product_type": "addon"
+    },
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "70b6ccb8-85ff-4d8d-b8b2-b356d2bbebdc",
+        "pack_scope": "world",
+        "version": [1, 0, 0],
+        "min_engine_version": [1 , 21 , 120]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "5e2078ee-7d4d-40ba-b7f8-e143faf4775f",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "d242a9f9-724e-4e68-a48f-fb4a57fb9942",
+            "version": [1, 0, 0]
+        }
+    ]
+}
