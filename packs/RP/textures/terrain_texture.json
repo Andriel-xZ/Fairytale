@@ -1,5 +1,30 @@
 {
     "resource_pack_name": "nv_ft",
     "texture_name": "atlas.terrain",
-    "texture_data": {}
+    "texture_data": {
+        "nv_ft:campfire_lit": {
+            "textures": "textures/nv/ft/blocks/campfire/campfire_lit"
+        },
+        "nv_ft:campfire_off": {
+            "textures": "textures/nv/ft/blocks/campfire/campfire_off"
+        },
+        "nv_ft:campfire_burned": {
+            "textures": "textures/nv/ft/blocks/campfire/campfire_burned"
+        },
+        "nv_ft:tent": {
+            "textures": "textures/nv/ft/entity/tent/tent"
+        },
+        "nv_ft:tent_bandit": {
+            "textures": "textures/nv/ft/entity/tent/tent_bandit_1"
+        },
+        "nv_ft:tent_bandit_2": {
+            "textures": "textures/nv/ft/entity/tent/tent_bandit_2"
+        },
+        "nv_ft:tent_bandit_3": {
+            "textures": "textures/nv/ft/entity/tent/tent_bandit_3"
+        },
+        "nv_ft:invisible_texture": {
+            "textures": "textures/blocks/amethyst_block" // "textures/nv/ft/blocks/invisible_block"
+        }
+    }
 }

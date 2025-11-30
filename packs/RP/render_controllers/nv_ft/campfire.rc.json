@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.nv_ft.campfire": {
+            "arrays": {
+                "textures": {
+                    "Array.stages": [
+                        "Texture.off",
+                        "Texture.lit",
+                        "Texture.burned"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "textures": [ "Array.stages[q.property('nv_ft:burn_stage')]" ],
+            "materials": [{ "*": "Material.default" }],
+            "uv_anim": {
+                "offset": [0, "math.mod(math.floor(q.life_time * 12), 5) / 5"],
+                "scale": [1, "1 / 5"]
+            }
+        }
+    }
+}

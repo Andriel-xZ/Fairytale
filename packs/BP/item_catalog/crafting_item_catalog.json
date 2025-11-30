@@ -4,7 +4,20 @@
         "categories": [
             {
                 "category_name": "items",
-                "groups": []
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "nv_ft:tent",
+                            "name": "nv_ft:itemGroup.name.tent"
+                        },
+                        "items": [
+                            "nv_ft:tent",
+                            "nv_ft:tent_bandit",
+                            "nv_ft:tent_bandit_2",
+                            "nv_ft:tent_bandit_3"
+                        ]
+                    }
+                ]
             }
         ]
     }

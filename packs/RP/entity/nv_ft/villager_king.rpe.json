@@ -1,0 +1,47 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "nv_ft:villager_king",
+            "materials": {
+                "default": "player_animated"
+            },
+            "textures": {
+                "default": "textures/nv/ft/entity/villager/king"
+            },
+            "geometry": {
+                "default": "geometry.nv_ft.villager_king"
+            },
+            "animations": {
+                "blink_controller": "controller.animation.nv_ft.villager_blink",
+                "controller": "controller.animation.nv_ft.villager_king",
+                "look_at_target": "animation.common.look_at_target",
+                "walk": "animation.nv_ft.villager.walk",
+                "king_walk": "animation.nv_ft.villager.king_walk",
+                "idle": "animation.nv_ft.villager.king_idle",
+                "death": "animation.nv_ft.villager.death"
+            },
+            "scripts": {
+                "initialize": [
+                    "v.frame_count = q.variant == 1 ? 16 : 12;",
+                    "v.blink_interval = math.random(1.5, 5);",
+                    "v.blink = false;",
+                    "v.uv_frame = 0;"
+                ],
+                "pre_animation": [
+                    "v.uv_frame = v.blink ? math.floor(q.life_time * 12) : 0;"
+                ],
+                "animate": [
+                    { "blink_controller": "!q.property('nv_ft:dead')" },
+                    { "controller": "!q.property('nv_ft:dead')" },
+                    { "death": "q.property('nv_ft:dead')" }
+                ]
+            },
+            "spawn_egg": {
+                "base_color": "#990303",
+                "overlay_color": "#ffc831"
+            },
+            "render_controllers": [ "controller.render.nv_ft.villager_without_variants" ]
+        }
+    }
+}

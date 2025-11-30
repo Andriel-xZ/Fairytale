@@ -1,0 +1,153 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "nv_ft:tent_bandit",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "nv_ft:placed": [ false, true ],
+                "nv_ft:is_main": [ false, true ],
+                "nv_ft:collision_type": [ "frontWall", "frontPillar", "backWall", "rightWall", "leftWall", "top" ],
+                "nv_ft:lx": [0, 1, 2, 3, 4],
+                "nv_ft:ly": [0, 1, 2, 3],
+                "nv_ft:lz": [0, 1, 2, 3, 4]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [ "minecraft:cardinal_direction" ]
+                }
+            }
+        },
+        "components": {
+            "nv_ft:tent_multiblock": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "nv_ft:tent_bandit",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:selection_box": true,
+            "minecraft:collision_box": true,
+            "minecraft:geometry": "geometry.nv_ft.tent_item",
+            "minecraft:map_color": "#564740",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:light_dampening": 0,
+            "tag:minecraft:is_shears_item_destructible":{}
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('nv_ft:is_main')",
+                "components": { "minecraft:loot": "loot_tables/empty.json" }
+            },
+            {
+                "condition": "q.block_state('nv_ft:placed')",
+                "components": { 
+                    "minecraft:geometry": {
+                        "identifier": "geometry.nv_ft.invisible_model",
+                        "bone_visibility": {
+                            "invisible": false
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'frontWall'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [-8, 0, 1.5],
+	                    "size": [16, 16, 1]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [-8, 0, 1.5],
+	                    "size": [16, 16, 1]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'frontPillar'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [-1, 0, 1.5],
+	                    "size": [9, 16, 1]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [-1, 0, 1.5],
+	                    "size": [9, 16, 1]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'leftWall'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [7, 0, -8],
+	                    "size": [1, 16, 16]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [6.5, 0, -8],
+	                    "size": [1, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'rightWall'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [-8, 0, -8],
+	                    "size": [1, 16, 16]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [-7.5, 0, -8],
+	                    "size": [1, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'backWall'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [-8, 0, -2.5],
+	                    "size": [16, 16, 1]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [-8, 0, -2.5],
+	                    "size": [16, 16, 1]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('nv_ft:collision_type') == 'top'",
+                "components": { 
+                    "minecraft:collision_box": {
+                    	"origin": [-8, 0, -8],
+	                    "size": [16, 1, 16]
+                    },
+                    "minecraft:selection_box": {
+                    	"origin": [-8, 0, -8],
+	                    "size": [16, 1, 16]
+                    }
+                }
+            },
+            
+
+
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": { "minecraft:transformation": { "rotation": [ 0, 180, 0 ] }}
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": { "minecraft:transformation": { "rotation": [ 0, 90, 0 ] }}
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": { "minecraft:transformation": { "rotation": [ 0, -90, 0 ] }}
+            }
+        ]
+    }
+}

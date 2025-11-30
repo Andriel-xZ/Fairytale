@@ -1,0 +1,33 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.nv_ft.troll": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "animations": [ "idle", "look_at_target" ],
+                    "transitions": [
+                        { "walk": "q.ground_speed > 0.1" },
+                        { "sniff": "q.timer_flag_1" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [ "walk", "look_at_target" ],
+                    "transitions": [
+                        { "idle": "!q.ground_speed > 0.1" },
+                        { "sniff": "q.timer_flag_1" }
+                    ],
+                    "blend_transition": 0.5
+                },
+                "sniff": {
+                    "animations": [ "sniff" ],
+                    "transitions": [
+                        { "idle": "!q.timer_flag_1" }
+                    ],
+                    "blend_transition": 0.5
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.nv_ft.villager": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "animations": [ "idle", "look_at_target" ],
+                    "transitions": [
+                        { "walk": "q.ground_speed > 0.1" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [ "walk", "look_at_target" ],
+                    "transitions": [
+                        { "idle": "!q.ground_speed > 0.1" }
+                    ],
+                    "blend_transition": 0.5
+                }
+            }
+        },
+        "controller.animation.nv_ft.villager_king": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "animations": [ "idle", "look_at_target" ],
+                    "transitions": [
+                        { "king_walk": "q.ground_speed > 0 && q.ground_speed <= 0.75" },
+                        { "walk": "q.ground_speed > 0.75" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "king_walk": {
+                    "animations": [ "king_walk", "look_at_target" ],
+                    "transitions": [
+                        { "idle": "q.ground_speed <= 0" },
+                        { "walk": "q.ground_speed > 0.75" }
+                    ],
+                    "blend_transition": 0.5
+                },
+                "walk": {
+                    "animations": [ "walk", "look_at_target" ],
+                    "transitions": [
+                        { "idle": "q.ground_speed <= 0" },
+                        { "king_walk": "q.ground_speed > 0 && q.ground_speed <= 0.75" }
+                    ],
+                    "blend_transition": 0.5
+                }
+            }
+        },
+        "controller.animation.nv_ft.villager_blink": {
+            "initial_state": "eye_open",
+            "states": {
+                "eye_open": {
+                    "transitions": [
+                        { "blink": "q.state_time > v.blink_interval" }
+                    ]
+                },
+                "blink": {
+                    "on_entry": [
+                        "v.blink_interval = math.random(1.5, 5);",
+                        "v.blink = true;"
+                    ],
+                    "on_exit": [
+                        "v.blink = false;"
+                    ],
+                    "transitions": [
+                        { "eye_open": "q.state_time > 1.25" }
+                    ]
+                }
+            }
+        }
+    }
+}

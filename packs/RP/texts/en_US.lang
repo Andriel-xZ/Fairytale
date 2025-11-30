@@ -1,2 +1,18 @@
 pack.name=Fairytale
 pack.description=By: NORVALE
+
+nv_ft:itemGroup.name.tent=Tents
+
+tile.nv_ft:tent.name=Tent
+tile.nv_ft:tent_bandit.name=Bandit Tent Standard
+tile.nv_ft:tent_bandit_2.name=Bandit Tent Green
+tile.nv_ft:tent_bandit_3.name=Bandit Tent Brown
+tile.nv_ft:campfire.name=Campfire with Soup
+
+item.spawn_egg.entity.nv_ft:villager_common.name=Fairytale Villager Spawn Egg
+item.spawn_egg.entity.nv_ft:villager_king.name=Fairytale King Spawn Egg
+item.spawn_egg.entity.nv_ft:troll.name=Troll Spawn Egg
+
+entity.nv_ft:villager_common.name=Fairytale Villager
+entity.nv_ft:villager_king.name=Fairytale King
+entity.nv_ft:troll.name=Troll

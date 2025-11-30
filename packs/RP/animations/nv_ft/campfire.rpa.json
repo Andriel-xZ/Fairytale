@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nv_ft.campfire.rotation": {
+			"loop": true,
+			"bones": {
+				"campfire": {
+					"rotation": [ "q.property('nv_ft:cardinal_rotation') == 'up' ? 90 : q.property('nv_ft:cardinal_rotation') == 'down' ? -90 : 0", "q.property('nv_ft:cardinal_rotation') == 'south' ? 180 : q.property('nv_ft:cardinal_rotation') == 'west' ? -90 : q.property('nv_ft:cardinal_rotation') == 'east' ? 90 : 0", 0 ],
+					"position": [0, -8.125, 0]
+				}
+			}
+		}
+	}
+}

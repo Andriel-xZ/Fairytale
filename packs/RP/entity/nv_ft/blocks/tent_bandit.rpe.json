@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nv_ft:tent_bandit_entity",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+            "textures": {
+				"default": "textures/nv/ft/entity/tent/tent_bandit_1"
+			},
+			"geometry": {
+				"default": "geometry.nv_ft.tent_entity"
+			},
+			"animations": {
+				"rotation": "animation.nv_ft.tent.rotation"
+			},
+			"scripts": {
+				"animate": [ "rotation" ]
+			},
+            "render_controllers": [ "controller.render.default" ]
+		}
+	}
+}

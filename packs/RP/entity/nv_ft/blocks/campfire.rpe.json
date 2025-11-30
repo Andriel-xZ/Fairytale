@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nv_ft:campfire_entity",
+			"materials": {
+				"default": "player_animated"
+			},
+            "textures": {
+				"off": "textures/nv/ft/blocks/campfire/campfire_off",
+				"lit": "textures/nv/ft/blocks/campfire/campfire_lit",
+				"burned": "textures/nv/ft/blocks/campfire/campfire_burned"
+			},
+			"geometry": {
+				"default": "geometry.nv_ft.campfire"
+			},
+			"animations": {
+				"rotation": "animation.nv_ft.campfire.rotation"
+			},
+			"scripts": {
+				"animate": [ "rotation" ]
+			},
+            "render_controllers": [ "controller.render.nv_ft.campfire" ]
+		}
+	}
+}

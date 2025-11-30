@@ -1,0 +1,13 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.nv_ft.troll.walk": {
+            "loop": true,
+			"animation_length": 4,
+            "timeline": {
+                "2.0": ["/camerashake add @a[r=32] 0.05 0.1 positional"],
+                "4.0": ["/camerashake add @a[r=32] 0.05 0.1 positional"]
+            }
+        }
+    }
+}
