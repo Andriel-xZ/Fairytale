@@ -1,0 +1,53 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "nv_ft:bandit",
+            "materials": {
+                "default": "player_animated"
+            },
+            "enable_attachables": true,
+            "textures": {
+                "variant_1": "textures/nv/ft/entity/bandit/bandit1",
+                "variant_2": "textures/nv/ft/entity/bandit/bandit2",
+                "variant_3": "textures/nv/ft/entity/bandit/bandit3"
+            },
+            "geometry": {
+                "default": "geometry.nv_ft.bandit_1"
+            },
+            "animations": {
+                "blink_controller": "controller.animation.nv_ft.villager_blink",
+                "arms_controller": "controller.animation.nv_ft.bandit_arms",
+                "legs_controller": "controller.animation.nv_ft.bandit_legs",
+                "look_at_target": "animation.common.look_at_target",
+                "walk_arms": "animation.nv_ft.bandit.walk_arms",
+                "walk_legs": "animation.nv_ft.bandit.walk_legs",
+                "idle": "animation.nv_ft.villager.idle",
+                "attack": "animation.nv_ft.bandit.attack",
+                "death": "animation.nv_ft.villager.death"
+            },
+            "scripts": {
+                "initialize": [
+                    "v.frame_count = q.variant == 2 ? 8 : 12;",
+                    "v.blink_interval = math.random(1.5, 5);",
+                    "v.blink = false;",
+                    "v.uv_frame = 0;"
+                ],
+                "pre_animation": [
+                    "v.uv_frame = v.blink ? math.floor(q.life_time * 12) : 0;"
+                ],
+                "animate": [
+                    { "blink_controller": "!q.property('nv_ft:dead')" },
+                    { "arms_controller": "!q.property('nv_ft:dead')" },
+                    { "legs_controller": "!q.property('nv_ft:dead')" },
+                    { "death": "q.property('nv_ft:dead')" }
+                ]
+            },
+            "spawn_egg": {
+                "base_color": "#3d1c0f",
+                "overlay_color": "#55612b"
+            },
+            "render_controllers": [ "controller.render.nv_ft.bandit" ]
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "nv_ft:spawn_campsite",
+            "menu_category": {
+                "category": "none"
+            },
+            "states": {
+                "nv_ft:generate": [ false, true ]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [ "minecraft:cardinal_direction" ]
+                }
+            }
+        },
+        "components": {
+            "nv_ft:spawn_campsite": {},
+            "minecraft:tick": {
+                "interval_range": [10, 10]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "nv_ft:campfire_off",
+                    "render_method": "alpha_test"
+                }
+            },
+            
+            "minecraft:selection_box": true,
+            "minecraft:collision_box": true,
+            "minecraft:geometry": {
+                "identifier": "geometry.nv_ft.invisible_model",
+                "bone_visibility": {
+                    "invisible": false
+                }
+            },
+            "minecraft:map_color": "#b8b298",
+            "minecraft:destructible_by_mining": false,
+            "minecraft:light_dampening": 0
+        }
+    }
+}

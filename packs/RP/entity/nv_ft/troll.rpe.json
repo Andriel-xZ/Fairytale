@@ -17,10 +17,15 @@
                 "look_at_target": "animation.common.look_at_target",
                 "idle": "animation.nv_ft.troll.idle",
                 "walk": "animation.nv_ft.troll.walk",
-                "sniff": "animation.nv_ft.troll.sniff"
+                "sniff": "animation.nv_ft.troll.sniff",
+                "grab": "animation.nv_ft.troll.grab_eat"
             },
             "scripts": {
                 "animate": [ "controller" ]
+            },
+            "particle_effects": {
+                "dirt": "nv_ft:troll_walk_dirt",
+                "dust": "nv_ft:troll_walk_dust"
             },
             "spawn_egg": {
                 "base_color": "#453b35",

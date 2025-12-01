@@ -1,0 +1,53 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.nv_ft.bandit_arms": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "animations": [ "look_at_target" ],
+                    "transitions": [
+                        { "walk": "q.ground_speed > 0.1" },
+                        { "attacking" : "v.attack_time > 0.0" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [ "walk_arms", "look_at_target" ],
+                    "transitions": [
+                        { "attacking" : "v.attack_time > 0.0" },
+                        { "idle": "!q.ground_speed > 0.1" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attacking": {
+                    "animations": [ "attack", "look_at_target" ],
+                    "transitions": [
+                        { "walk": "q.ground_speed > 0.1 && q.all_animations_finished" },
+                        { "idle" : "!q.ground_speed > 0.1 && q.all_animations_finished" }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.nv_ft.bandit_legs": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "animations": [ "idle" ],
+                    "transitions": [
+                        { "walk": "q.ground_speed > 0.1" }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [ "walk_legs" ],
+                    "transitions": [
+                        { "idle": "!q.ground_speed > 0.1" }
+                    ],
+                    "blend_transition": 0.5
+                }
+            }
+        }
+    }
+}

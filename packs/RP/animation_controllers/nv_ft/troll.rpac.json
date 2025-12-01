@@ -8,7 +8,8 @@
                     "animations": [ "idle", "look_at_target" ],
                     "transitions": [
                         { "walk": "q.ground_speed > 0.1" },
-                        { "sniff": "q.timer_flag_1" }
+                        { "sniff": "q.timer_flag_1" },
+                        { "grab": "q.property('nv_ft:grabbing')" }
                     ],
                     "blend_transition": 0.2
                 },
@@ -16,7 +17,8 @@
                     "animations": [ "walk", "look_at_target" ],
                     "transitions": [
                         { "idle": "!q.ground_speed > 0.1" },
-                        { "sniff": "q.timer_flag_1" }
+                        { "sniff": "q.timer_flag_1" },
+                        { "grab": "q.property('nv_ft:grabbing')" }
                     ],
                     "blend_transition": 0.5
                 },
@@ -26,6 +28,14 @@
                         { "idle": "!q.timer_flag_1" }
                     ],
                     "blend_transition": 0.5
+                },
+                "grab": {
+                    "animations": [ "grab" ],
+                    "transitions": [
+                        { "idle": "!q.property('nv_ft:grabbing') || q.all_animations_finished" }
+                    ],
+                    "blend_transition": 0.5,
+                    "blend_via_shortest_path": true
                 }
             }
         }

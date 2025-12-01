@@ -1,5 +1,5 @@
 pack.name=Fairytale
-pack.description=By: NORVALE
+pack.description=Resource pack for Fairytale
 
 nv_ft:itemGroup.name.tent=Tents
 
@@ -12,7 +12,15 @@ tile.nv_ft:campfire.name=Campfire with Soup
 item.spawn_egg.entity.nv_ft:villager_common.name=Fairytale Villager Spawn Egg
 item.spawn_egg.entity.nv_ft:villager_king.name=Fairytale King Spawn Egg
 item.spawn_egg.entity.nv_ft:troll.name=Troll Spawn Egg
+item.spawn_egg.entity.nv_ft:bandit.name=Bandit Spawn Egg
 
 entity.nv_ft:villager_common.name=Fairytale Villager
 entity.nv_ft:villager_king.name=Fairytale King
 entity.nv_ft:troll.name=Troll
+entity.nv_ft:bandit.name=Bandit
+
+
+## GUIDEBOOK
+item.nv_ft:fairytale_guidebook=Fairytale Guidebook
+nv_ft.guidebook.first_page.title=Fairytale guidebook
+nv_ft.guidebook.first_page.text=Once upon a time, there was a world. A world so vast with stories and fairytales that it would be passed down from generation to generation. Fairy tales of trolls and other creatures were long thought to be mere nonsense. However, suddenly rumors started to spread among brave people who lived to tell the story of facing these beasts. Not only had they been able to get back in one piece, but those who took on the challenge of engaging in battle were handsomely rewarded for their bravery. That is your world now, for you to explore and immerse yourself in.~LINEBREAK~~LINEBREAK~Norvale presents: Fairytale Ambience~LINEBREAK~~LINEBREAK~Fairytale Ambience is an experience to breathe more life into your world. You may encounter both friendly bypassers, settlers in small camps, or be ambushed by bandits. Stay alert and listen to the rumors, stories, and fairy tales that are told. Strangers may give you clues on where to find trolls, if you’re up for the challenge.~LINEBREAK~~LINEBREAK~For feedback or problems, reach out to us at Norvale.com

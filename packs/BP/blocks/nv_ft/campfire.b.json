@@ -17,7 +17,8 @@
             }
         },
         "components": {
-            "nv_ft:block_with_entity": {},
+            "nv_ft:on_place": {},
+            "nv_ft:on_interact": {},
             "minecraft:material_instances": {
                 "*": {
                     "texture": "nv_ft:campfire_off",
@@ -48,7 +49,7 @@
                 }
             },
             {
-                "condition": "q.block_state('nv_ft:burn_stage') == 2",
+                "condition": "q.block_state('nv_ft:burn_stage') == 1",
                 "components": { 
                     "minecraft:light_emission": 15
                 }

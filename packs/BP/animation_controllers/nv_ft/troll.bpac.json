@@ -7,19 +7,27 @@
                 "idle": {
                     "transitions": [
                         { "walk": "q.ground_speed > 0.1" },
-                        { "sniff": "q.timer_flag_1" }
+                        { "sniff": "q.timer_flag_1" },
+                        { "grab": "q.property('nv_ft:grabbing')" }
                     ]
                 },
                 "walk": {
                     "animations": [ "walk" ],
                     "transitions": [
                         { "idle": "!q.ground_speed > 0.1" },
-                        { "sniff": "q.timer_flag_1" }
+                        { "sniff": "q.timer_flag_1" },
+                        { "grab": "q.property('nv_ft:grabbing')" }
                     ]
                 },
                 "sniff": {
                     "transitions": [
                         { "idle": "!q.timer_flag_1" }
+                    ]
+                },
+                "grab": {
+                    "animations": [ "grab" ],
+                    "transitions": [
+                        { "idle": "!q.property('nv_ft:grabbing')" }
                     ]
                 }
             }

@@ -1,5 +1,9 @@
 {
     "resource_pack_name": "nv_ft",
     "texture_name": "atlas.items",
-    "texture_data": {}
+    "texture_data": {
+        "nv_ft:fairytale_guidebook": {
+            "textures": "textures/nv/ft/items/fairytale_guidebook"
+        }
+    }
 }

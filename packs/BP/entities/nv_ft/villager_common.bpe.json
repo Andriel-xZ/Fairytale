@@ -77,6 +77,11 @@
                                         "test": "is_family",
                                         "subject": "other",
                                         "value": "zoglin"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "bandit"
                                     }
                                 ]
                             },
@@ -144,6 +149,9 @@
             },
 
             "nv_ft:is_dead": {
+                "minecraft:type_family": {
+                    "family": [ "fairytale", "mob" ]
+                },
                 "minecraft:timer": {
                     "time": [2, 3],
                     "looping": true,
@@ -214,7 +222,7 @@
             },
             "minecraft:nameable": {},
             "minecraft:movement": {
-                "value": 0.4
+                "value": 0.3
             },
             "minecraft:navigation.walk": {
                 "can_path_over_water": true,

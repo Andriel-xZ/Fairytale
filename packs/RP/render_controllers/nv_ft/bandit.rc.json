@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.nv_ft.bandit": {
+            "arrays": {
+                "textures": {
+                    "Array.variants": [
+                        "Texture.variant_1",
+                        "Texture.variant_2",
+                        "Texture.variant_3"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "textures": [ "Array.variants[q.variant]" ],
+            "materials": [{ "*": "Material.default" }],
+            "uv_anim": {
+                "offset": [0, "math.mod(v.uv_frame, v.frame_count) / v.frame_count"],
+                "scale": [1, "1 / v.frame_count"]
+            }
+        }
+    }
+}
